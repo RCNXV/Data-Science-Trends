@@ -1,12 +1,30 @@
 SELECT
-A.*,
-B.name Company_Country,
-D.name Residence_Country,
-C.World_Bank_Income_Group_Combined_13 Company_Country_Income,
-E.World_Bank_Income_Group_Combined_13 Residence_Country_Income,
-case when B.name = D.name then 'Yes' else 'No' end as Same_Company_and_Residence_Loc
-FROM `brave-server-357903.casestudyminicourse.salary_dataset_cleaned` A
-LEFT JOIN `brave-server-357903.casestudyminicourse.iso_3166_countries` B on A.company_location = B.alpha_2
-LEFT JOIN `brave-server-357903.casestudyminicourse.jme_class` C on B.alpha_3 = C.Iso3_code
-LEFT JOIN `brave-server-357903.casestudyminicourse.iso_3166_countries` D on A.employee_residence = D.alpha_2
-LEFT JOIN `brave-server-357903.casestudyminicourse.jme_class` E on D.alpha_3 = E.Iso3_code
+  A.*,
+  B.name Company_Country,
+  D.name Residence_Country,
+  C.World_Bank_Income_Group_Combined_13 Company_Country_Income,
+  E.World_Bank_Income_Group_Combined_13 Residence_Country_Income,
+  CASE
+    WHEN B.name = D.name THEN 'Yes'
+  ELSE
+  'No'
+END
+  AS Same_Company_and_Residence_Loc
+FROM
+  `brave-server-357903.casestudyminicourse.salary_dataset_cleaned` A
+LEFT JOIN
+  `brave-server-357903.casestudyminicourse.iso_3166_countries` B
+ON
+  A.company_location = B.alpha_2
+LEFT JOIN
+  `brave-server-357903.casestudyminicourse.jme_class` C
+ON
+  B.alpha_3 = C.Iso3_code
+LEFT JOIN
+  `brave-server-357903.casestudyminicourse.iso_3166_countries` D
+ON
+  A.employee_residence = D.alpha_2
+LEFT JOIN
+  `brave-server-357903.casestudyminicourse.jme_class` E
+ON
+  D.alpha_3 = E.Iso3_code
