@@ -1,23 +1,25 @@
 # RevoU-Mini-Course
 
-Project ini merupakan studi kasus pada Mini Course yang diselenggarakan oleh RevoU.
-Pada studi kasus ini diberikan sebuah dataset yang berisi tentang profesi data science dari seluruh dunia.
-tugas yang diberikan adalah 
-1. Pelajari dataset tersebut, kemudian list 3 poin yang ingin ditunjukan
-2. Explore dan Clean the dataset
-3. Create some visualization
+This project is a case study conducted during the Mini Course organized by RevoU.
+In this case study, a dataset containing information about data science professions worldwide was provided.
+The tasks assigned were as follows:
 
-Hal yang pertama kali saya lakukan adalah membersihkan dataset tersebut
-yang terdiri dari 
-1. Mengecek dan mengubah tipe data
-2. Menghapus data yang sama (duplikat)
-3. Handling Missing Values
-4. Menghapus kolom yang kurang penting
-5. Mengganti nama data pada beberapa kolom
-6. Memeriksa outlier
+1. Study the dataset and list three points to be highlighted.
+2. Explore and clean the dataset.
+3. Create some visualizations.
 
-setelah hal tersebut dilakukan, dilanjutkan dengan menggabungkan dataset tersebut dengan dataset external
-disini saya menggunakan tabel ISO 3166 untuk kode negara dan tabel perkembangan finansial negara-negara.
-Saya menggunakan Google BigQuery untuk menggabungkan ketiga tabel tersebut.
+The first thing I did was clean the dataset, which involved the following steps:
 
-Setelah tabel tersebut siap digunakan, saya menggunakan Google Data Studio untuk membuat visualisasi. Lalu saya simpan dalam bentuk power point.
+1. Checking and modifying data types.
+2. Removing duplicate data.
+3. Handling missing values.
+4. Deleting irrelevant columns.
+5. Renaming data in certain columns.
+6. Checking for outliers.
+
+After completing these steps, I proceeded to merge the dataset with an external dataset.
+I used the ISO 3166 table for country codes and a table on the financial development of countries.
+To merge the three tables, I utilized Google BigQuery.
+
+Once the combined table was ready, I used Google Data Studio to create visualizations.
+Finally, I saved the visualizations in the form of a PowerPoint presentation.
